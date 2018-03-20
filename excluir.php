@@ -6,5 +6,5 @@
 	$deletar->bindValue(":id",$id);
 	$deletar->execute();
 	
-	header('listar.php');
+	header('location:listar.php');
 ?>
