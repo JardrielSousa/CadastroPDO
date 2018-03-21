@@ -39,8 +39,9 @@
       </tbody>
       <!--Code PHP para puxar/listar do banco-->
       <?php 
-        include_once("conexao.php");//link para a page conexão
-        $lista = $pdo->query("SELECT * FROM cadastro");//lista tudo
+        //faz conexão ao b.d 
+        include_once("conexao.php");
+        $lista = $pdo->query("SELECT * FROM cadastro");//Comando Sql Seleciona Todos da Tabela Cadastro
         $resol = $lista->fetchAll();//lista todos
 
 
@@ -48,25 +49,29 @@
 
               foreach ($resol as $row)//laço de repetição para exibir a lista
               { ?>
-      <tr> <!--Mostra os resultados em tabelas-->
-                <td><a name="<?=$row['id'];?>"></a><?php echo $row['id'];?>
+                <tr>
+                 <!--
+                  Mostra os resultados em tabelas
+                  -->
+                <td><?php echo $row['id'];?>
                 </td>
                 <td><?php echo $row['nome'];?></td>
                 
                 
                 <td>
                   <!--Botao vizualizar
-                  target : para que o id  cadastrado não se repita
-                  whatever : para exibir o id 
+                                target : para que o id  cadastrado não se repita
+                                whatever : para exibir o id no modal
                   -->
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<?php echo $row['id'];?>" data-whatever="<?php echo $row['id'];?>">Visualizar</button>
                   <!--Botao editar
-                  whatever : para exibir o id , nome e email 
-                  joga os dados para os recipientes do modal
+                                whatever : para exibir o id , nome e email no joga os dados para os recipientes do modal
                   -->
                   <button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#exampleModal" data-whatever="<?php echo $row['id']?>" data-whatevernome="<?php echo $row['nome'];?>"
-                    data-whateveremail="<?php echo $row['email'];?>" data-whateverid="<?php echo $row['id'];?>" >Editar</button>
-
+                    data-whateveremail="<?php echo $row['email'];?>">Editar</button>
+                   <!--Botao Excluir
+                               tem uma ancora <a> , que passa o parametro id para a page excluir
+                  -->
                   <a href="excluir.php?id=<?=$row['id']?>">
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" data-whatever="@mdo" href="">Apagar</button></a>
 
@@ -114,13 +119,12 @@
         <form method="POST" action="update.php">
           <div class="form-group">
             <label for="recipient-name" class="control-label">Nome:</label>
-            <input type="text" name='nome' class="form-control" id="recipient-name">
+            <input type="text" class="form-control" id="recipient-name">
           </div>
           <div class="form-group">
             <label for="message-text" class="control-label">Email:</label>
-            <textarea class="form-control" name='email' id="recipient-email"></textarea>
+            <textarea class="form-control" id="recipient-email"></textarea>
           </div>
-          <input type="text" name='idreg' hidden="hidden" id="idreg">
         
       </div>
       <div class="modal-footer">
@@ -138,12 +142,10 @@
   var recipient = button.data('whatever')//variaveis referentes ao parametro criado whater no botão  editar
   var recipientnome = button.data('whatevernome')
   var recipientemail = button.data('whateveremail')
-  var recipientid = button.data('whateverid')
   var modal = $(this)
   modal.find('.modal-title').text('ID: ' + recipient)//Mensagem de exibiçao do modal
   modal.find('#recipient-name').val(recipientnome)//exibe a variavel com o valor puxado do banco
   modal.find('#recipient-email').val(recipientemail)
-  modal.find('#idreg').val(recipientid)
   
 })
 </script>
