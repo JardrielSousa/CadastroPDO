@@ -1,9 +1,14 @@
 <?php 
+include('conexao.php');
 	
-	$id = 1 ;
+	$id = $_GET['id'] ;
+
+
 
 	$deleta = $pdo->prepare("DELETE FROM cadastro WHERE id=:id");
 	$deleta->bindValue(":id",$id);
-	$deletar->execute();
+	$deleta->execute();
+
+	header('location:lista.php');
 
 ?>
