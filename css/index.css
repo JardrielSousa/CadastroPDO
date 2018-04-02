@@ -2,70 +2,10 @@
 	margin: 1px;
 	text-align: center;
 }
-
-/*Letras Brancas*/
-.white{
-	color: white;
+.borda{
+	border: 1px solid black;
 }
 
-/*Tamanho do Logo */
-#icon1{
-	width: 50px;
-	height: 50px;
-	margin-top: -15px;
-	margin-left: -15px;
-}
-
-/*Tamanho no da Img*/
-.imgs{
-	width: 100%;
-	height: 300px;
-	
-}
-
-/*Tamanho das Imgs No Carousel*/
-.item{
-	width: 100%;
-	height: 210px;
-}
-
-.center{
-	background: black;
-	width: 100%;
-	height: 10px;
-}
-
-/* Efeito Nos Icones - Rodapé*/
-i{
-	color: white;
-}
-i:hover{
-	color: rgba(255,255,255,0.9);
-}
-#top{
-	padding: 7px;
-
-}
-#top:hover{
-	background: grey;
-	padding: 7px;
-}
-
-
-/* Login*/
-.login{
-	background: linear-gradient(to right,#ce2e3c,#da6709);
-	width: 100%;
-	height: 200px;
-}
-
-/* */
-.footer{
-	background: black;
-	width: 100%;
-	height: 150px;
-
-}
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 

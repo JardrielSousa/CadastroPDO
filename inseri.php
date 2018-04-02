@@ -9,7 +9,7 @@ $senha = md5($_POST['senha']);
 
 
 //insere ao bd
-$inseri = 'INSERT INTO cadastro(nome,email,senha) VALUES(:nome,:email,:senha)';
+$inseri = 'INSERT INTO login(nome,email,senha) VALUES(:nome,:email,:senha)';
 
 
 

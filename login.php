@@ -1,4 +1,6 @@
-
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,15 +22,27 @@
 		<div class="row">
 			<div class="col-md-offset-4">
 
-				<form action="inseri.php" method="POST" class="borda">
-					<h1>Cadastro</h1>
+				<form action="valida.php" method="POST" class="borda">
+					<h1>Login</h1>
 					<div class="form-group col-md-5">
-						<input type="text" placeholder="nome" name="nome" class="form-control"><br>
+					
 						<input type="email" placeholder="email" name="email" class="form-control"><br>
 						<input type="password" placeholder="senha" name="senha" class="form-control"><br>
-						<input type="submit" value="enviar" class="btn btn-primary">
+						<input type="submit" value="enviar" class="btn btn-primary col-md-12"><br>
+						<p class="text-center text-danger">
+					<?php 
+						if(isset($_SESSION['LoginErro'])){
+							echo $_SESSION['LoginErro'];
+							unset($_SESSION['LoginErro']);
+						}
+											?>
+				</p>
+						
+
 					</div>
+
 				</form>
+				
 			</div>
 		</div>
 	</div>
