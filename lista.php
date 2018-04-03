@@ -1,8 +1,5 @@
 <?php
-  session_start();
-  echo " Usuario:" . $_SESSION['email'];
-
-
+ 
 
  ?>
 <!DOCTYPE html>
@@ -73,8 +70,8 @@
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<?php echo $row['id'];?>" data-whatever="<?php echo $row['id'];?>">Visualizar</button>
 
                   <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="<?php echo $row['id'];?>" data-whatevernome="<?php echo $row['nome'];?>" data-whateveremail="<?php echo $row['email'];?>">Editar</button>
-                  
-                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">Apagar</button>
+                <a href="excluir.php?id=<?=$row['id'];?>"> <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" data-whatever="@mdo">Apagar</button>
+                  </a>
 
 
                   

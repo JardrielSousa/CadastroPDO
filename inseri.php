@@ -3,6 +3,8 @@
 
 include('conexao.php');
 
+
+
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = md5($_POST['senha']);
@@ -19,6 +21,6 @@ $stmt->bindValue(":email",$email); // paramentros
 $stmt->bindValue(":senha",$senha);// paramentros 
 $stmt->execute(); //executa os paramentros
 
-header('location:cadastrado.php');
+header('location:lista.php');
 
 ?>
