@@ -13,9 +13,19 @@
   <link rel="stylesheet" href="css/bootstrap-theme.css">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
   <script src="js/jquery.js"></script>
+  <script src="js/trasintions.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+    $("#texto").show();
+    $("#texto").show(10000);
+
+});
+</script>
+<script>
     //usado no botao visualizar
     $('#exampleModal').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget) // Button that triggered the modal
@@ -33,21 +43,27 @@
   </script>
  </head>
  <body>
-
+  
 
 	<div class="banner" id="box">
-		<div class="text ">
-			<h1 class="text">Sejam Bem Vindos</h1>
-			<p class="text">Selecionem uma Opção:</p>
-		</div>
-		<div class="text-center ">
-			<div class="row col-md-2">
-			<a href="login.php" class="btn-lg btn-primary">Login</a>
-			</div>	
-			<div class="row col-md-offset-4">
-			<a href="cadastro.php" class="btn-lg btn-default">Cadastro</a>
-			</div>
-		</div>
+    <div class="aqui">
+
+  		<div class="text" id="texto">
+  			<h1 class="text">Sejam Bem Vindos</h1>
+  			<p class="text">Selecionem uma Opção:</p>
+  		</div>
+
+  		<div class="text-center" id="botao">
+  			<div class="row col-md-2">
+  			<a href="login.php" class="btn-lg btn-primary">Login</a>
+  			</div>	
+
+  			<div class="row col-md-offset-4">
+  			<a href="cadastro.php" class="btn-lg btn-default">Cadastro</a>
+  			</div>
+
+  		</div>
+    </div>
 
 	</div>
 </body>

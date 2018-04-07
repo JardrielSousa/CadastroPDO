@@ -1,6 +1,8 @@
 <?php
  
 
+session_cache_expire(2);
+
  ?>
 <!DOCTYPE html>
  <html lang="pt-br">

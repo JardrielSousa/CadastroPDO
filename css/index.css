@@ -1,7 +1,8 @@
 *{
-
+	margin: 0;
 	
 }
+/*caixa transparente*/
 #box{
 	position: absolute;
 	left: 56%;
@@ -12,11 +13,13 @@
 
 	border: 1px solid white;
 	padding: 150px;
-	background:white;
+	background:rgba(255,255,255,0.5);
 	height: 100%;
 
 }
-
+.text-center{
+	margin-top: 0px;
+}
 
 body{
 	background: url("../img/index.jpg");

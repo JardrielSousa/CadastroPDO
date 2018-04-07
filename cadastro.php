@@ -26,7 +26,7 @@
 						<input type="text" placeholder="nome" name="nome" id="nome"  class="form-control" required/><br>
 						<input type="email" placeholder="email" name="email" class="form-control"><br>
 						<input type="password" placeholder="senha" name="senha" class="form-control"><br>
-						<input type="submit" value="enviar" class="btn-lg btn-default col-xs-12">
+						<input type="submit" value="cadastrar" class="btn-lg btn-default col-xs-12">
 					</div>
 				
 				</form>
