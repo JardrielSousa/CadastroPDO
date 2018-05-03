@@ -23,11 +23,11 @@
 			<div class=" banner " id="box">
 				<form action="valida.php" method="POST" class="borda">
 					<h1>Login</h1>
-					<div class="form-group col-md-8">
+					<div class="form-group col-md-8 col-xs-8">
 					
 						<input type="email" placeholder="email" name="email" class="form-control"><br>
 						<input type="password" placeholder="senha" name="senha" class="form-control"><br>
-						<input type="submit" value="enviar" class="btn btn-primary col-md-12 btn-lg"><br>
+						<input type="submit" value="enviar" class="btn btn-primary col-md-12 col-xs-5 btn-lg"><br>
 						<p class="text-center text-danger">
 						<?php 
 							if(isset($_SESSION['LoginErro'])){
@@ -39,7 +39,7 @@
 						
 
 					</div>
-					<div class="col-md-10">
+					<div class="col-md-10 col-xs-8">
 						<p>Efetuar Cadastro ? <a href="cadastro.php">Inscreva-se</a></p>
 					</div>
 				</form>

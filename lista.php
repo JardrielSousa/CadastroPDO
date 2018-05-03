@@ -1,8 +1,17 @@
 <?php
  
+session_start();
+      
+  
+if(!isset($_SESSION["user_email"])|| !isset($_SESSION["user_senha"])) {
+   session_destroy();
+   header("location:login.php");
+  }else{
+    echo "<h3>Voce esta logado! Seja bem vindo <h3>" . $_SESSION["user_email"];
+  }
 
-session_cache_expire(2);
 
+  
  ?>
 <!DOCTYPE html>
  <html lang="pt-br">
@@ -37,7 +46,7 @@ session_cache_expire(2);
   </script>
  </head>
  <body>
-  <a href="sair.php">sair</a>
+  <a href="logout.php"><font color="white">sair</font></a>
    <div class="panel-heading ">Listas dos Cadastrados</div>
     <!-- Table -->
   <table class="table page-header">
